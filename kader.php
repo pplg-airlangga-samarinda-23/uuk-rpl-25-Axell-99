@@ -12,10 +12,10 @@ $rows = $koneksi->execute_query($sql, []);
     <title>Data Bayi</title>
 </head>
 <style>
-    table, th, td{
+    table,th,td {
         border: 1px solid black;
     }
-</style>
+    </style>
 <body>
     <a href="tambah_data_bayi.php">Tambah Data Bayi</a>
     <table>
@@ -56,5 +56,6 @@ $rows = $koneksi->execute_query($sql, []);
             <?php endforeach; ?>
         </tbody>
     </table>
+    <button><a href="laman_awal.php">Back</a></button>
 </body>
 </html>

@@ -53,15 +53,11 @@
         <h1>DR. YOGA AXEL BAIM PRATAMA</h1>
     </header>
     <div class="btn ">
-        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " style="text-align: center" onclick="window.location.href='kader.php';">ㅤㅤㅤKaderㅤㅤㅤ</button>
-        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " class="cursor-pointer" onclick="window.location.href='admin.php';">ㅤㅤㅤAdminㅤㅤㅤ</button><br>
-        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " class="cursor-pointer" onclick="window.location.href='peserta.php';">ㅤㅤㅤPesertaㅤㅤㅤ</button>
+        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " style="text-align: center" onclick="window.location.href='login_kader.php';">ㅤㅤㅤKaderㅤㅤㅤ</button>
+        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " class="cursor-pointer" onclick="window.location.href='login_admin.php';">ㅤㅤㅤAdminㅤㅤㅤ</button><br>
+        <button class="button cursor-pointer px-6 py-4 text-black bg-zinc-300 text-lg text-xl uppercase rounded-2xl border duration-0,5 transition-shadow select-none shadow-xl/60 font-[Helvetica]  hover:text-white hover:bg-black " class="cursor-pointer" onclick="window.location.href='login_peserta.php';">ㅤㅤㅤPesertaㅤㅤㅤ</button>
     </div>
 
 </body>
 
 </html>
-
-
-
- 
