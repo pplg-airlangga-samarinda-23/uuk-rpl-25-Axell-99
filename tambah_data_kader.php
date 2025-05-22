@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="password" id="password" required>
         <button type="submit">Submit</button>
     </form>
-    <a href="barang.php">Kembali</a>
+    <a href="admin.php">Kembali</a>
 </body>
 </html>
 <!-- <php
