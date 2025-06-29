@@ -7,8 +7,9 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     $berat_bayi = $_POST["berat"];
     $tinggi_bayi = $_POST["tinggi"];
     $no_bpjs = $_POST["bpjs"];
+    
 
-    $sql = "INSERT INTO bayi (nama, tanggal_lahir, berat_bayi, tinggi_bayi, no_bpjs) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO bayi (nama, tanggal_lahir, berat_bayi, tinggi_bayi, no_bpjs, terakhir_pengecekan) VALUES (?, ?, ?, ?, ?,now())";
 
     $row = $koneksi->execute_query($sql, [$nama, $tanggal_lahir, $berat_bayi, $tinggi_bayi, $no_bpjs]);
 

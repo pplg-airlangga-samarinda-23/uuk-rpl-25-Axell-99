@@ -8,13 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_GET["id"];
     $nama = $_POST["nama"];
-    $tanggal_lahir = $_POST["tanggal_lahir"];
-    $berat_bayi = $_POST["berat_bayi"];
-    $tinggi_bayi = $_POST["tinggi_bayi"];
-    $no_bpjs = $_POST["no_bpjs"];
-    $sql = "UPDATE bayi SET nama = ?, tanggal_lahir = ?, berat_bayi =?, tinggi_bayi =?, no_bpjs =? WHERE id = ?";
+    $tanggal_lahir =$_POST["tanggal"];
+    $berat_bayi = $_POST["berat"];
+    $tinggi_bayi = $_POST["tinggi"];
+    $no_bpjs = $_POST["bpjs"];
+    // var_dump($tanggal_lahir);
+    $sql = "INSERT INTO bayi (nama, tanggal_lahir, berat_bayi, tinggi_bayi, no_bpjs, terakhir_pengecekan) VALUES (?, ?, ?, ?, ?,now())";
 
-    $row = $koneksi->execute_query($sql, [$nama, $password, $id]);
+    $row = $koneksi->execute_query($sql, [$nama, $tanggal_lahir, $berat_bayi,$tinggi_bayi,$no_bpjs]);
     header("location:kader.php");
 }
 ?>
@@ -28,15 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <h1>EDIT DATA BAYI</h1>
     <form action="" method="post">
             <label for="nama">Nama Bayi</label><br>
-            <input type="text" name="nama" id="nama" required><br>
+            <input type="text" name="nama" id="nama" value="<?=$row['nama']?>"  required><br>
             <label for="tanggal">Tanggal Lahir</label><br>
-            <input type="date" name="tanggal" id="tanggal" required><br>
+            <input type="date" name="tanggal" id="tanggal" value="<?=$row['tanggal_lahir']?>" required><br>
             <label for="berat">Berat Bayi</label><br>
-            <input type="number" name="berat" id="berat" required><br>
+            <input type="number" name="berat" id="berat" value="<?=$row['berat_bayi']?>" required><br>
             <label for="tinggi">Tinggi Bayi</label><br>
-            <input type="number" name="tinggi" id="tinggi" required><br>
+            <input type="number" name="tinggi" id="tinggi" value="<?=$row['tinggi_bayi']?>" required><br>
             <label for="bpjs">No BPJS</label><br>
-            <input type="text" name="bpjs" id="bpjs" required><br>
+            <input type="text" name="bpjs" id="bpjs" value="<?=$row['no_bpjs']?>" required><br>
         <button type="submit">Submit</button>
     </form>
     <a href="kader.php">Kembali</a>
